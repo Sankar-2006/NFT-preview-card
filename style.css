@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+:root {
+    /* Color Variables */
+    --background-color: hsl(217, 54%, 11%);
+    --card-background-color: hsl(216, 50%, 16%);
+    --line-color: hsl(215, 32%, 27%);
+    --white-color: hsl(0, 0%, 100%);
+    --cyan: hsl(178, 100%, 50%);
+    --soft-blue: hsl(215, 51%, 70%);
+
+    /* Transition Variable */
+    --transition: 0.2s ease-in-out;
+}
+
+/* Body Styles */
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background-color);
+}
+
+/* Main Container Styles */
+#main-container {
+    background-color: var(--card-background-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 10px;
+}
+
+/* Image Holder Styles */
+.img-holder {
+    background-image: url("./images/image-equilibrium.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 290px;
+    width: 280px;
+    border-radius: 10px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+/* Image Hover Container Styles */
+.img-hover-container {
+    display: none;
+    height: 100%;
+    position: relative;
+}
+
+.img-hover-container img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.hover-screen {
+    background-color: var(--cyan);
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    opacity: 0.3;
+}
+
+.img-holder:hover .img-hover-container {
+    display: block;
+}
+
+/* Text Container Styles */
+.text-container {
+    margin-left: 20px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Text Container Heading Styles */
+.text-container h3 {
+    color: var(--white-color);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.text-container h3:hover {
+    color: var(--cyan);
+    font-weight: 600;
+}
+
+/* Text Container Paragraph Styles */
+.text-container p {
+    width: 25ch;
+    color: var(--soft-blue);
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/* Ethereum & Days Left Container Styles */
+.eth-daysleft-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 20px;
+    font-weight: 600;
+}
+
+.eth-daysleft-container .eth,
+.eth-daysleft-container .daysleft {
+    display: inline-flex;
+    color: var(--cyan);
+}
+
+.eth-daysleft-container .daysleft {
+    color: var(--soft-blue);
+    font-weight: 400;
+}
+
+.eth-daysleft-container .eth img,
+.eth-daysleft-container .daysleft img,
+#footer img {
+    margin-right: 10px;
+}
+
+/* Footer Styles */
+#footer {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid var(--line-color);
+    padding: 12px 0 25px;
+    margin-right: 20px;
+    color: var(--soft-blue);
+    font-weight: 300;
+}
+
+#footer img {
+    width: 30px;
+    border: 1px solid var(--white-color);
+    border-radius: 50%;
+}
+
+#footer-name {
+    color: var(--white-color);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+#footer-name:hover {
+    color: var(--cyan);
+}
